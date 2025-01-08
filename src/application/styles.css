@@ -1,0 +1,291 @@
+/* Custom font */
+.yeseva-one-regular {
+    -fx-font-family: 'Yeseva One';
+    -fx-font-weight: 400;
+    -fx-font-style: normal;
+    -fx-font-size: 40px; /* Enlarged for better readability */
+    -fx-fill: #ffffff; /* Dark gray font color */
+}
+
+.slogan-text {
+    -fx-font-family: 'Yeseva One';
+    -fx-font-style: italic;
+    -fx-font-size: 18px;
+    -fx-fill: #ffffff; /* Slightly lighter gray */
+}
+
+/* Welcome buttons */
+.welcome-button {
+    -fx-background-color: linear-gradient(to bottom, #404040, #202020); /* Gradient for depth */
+    -fx-text-fill: white;
+    -fx-font-size: 14px; /* Increased font size for better visibility */
+    -fx-font-weight: bold;
+    -fx-border-radius: 25px;
+    -fx-padding: 15px 30px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.3, 2, 2);
+}
+
+.welcome-button:hover {
+    -fx-background-color: #505050; /* Slightly lighter gray on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 7, 0.4, 3, 3);
+}
+
+.welcome-gradient {
+	-fx-background-color: linear-gradient(to bottom, #5f9ea0, #009193);
+}
+
+/* Text Fields */
+.login-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #404040;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.login-field:focused {
+    -fx-border-color: #404040; /* Highlight border on focus */
+}
+
+/* Buttons */
+.login-button, .admin-search {
+    -fx-background-color: #404040;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-padding: 8px 20px;
+}
+
+.login-button:hover {
+    -fx-background-color: #606060;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.3, 2, 2);
+}
+
+/* Hyperlinks */
+.hyperlink {
+    -fx-text-fill: #606060;
+    -fx-font-size: 14px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #404040;
+    -fx-underline: true;
+}
+
+/* General styling */
+.root {
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-background-color: #f8f9fa; /* Light neutral background */
+    -fx-padding: 20px;
+    -fx-font-size: 14px;
+}
+
+.header-text {
+	-fx-font-size: 40px;
+	-fx-font-family: 'Yeseva One', serif
+}
+
+/* Title styling */
+.label-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #343a40; /* Dark text color */
+    -fx-padding: 10px 0;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057; /* Subtle dark tone */
+}
+
+/* Highlighted Labels */
+.label-highlight {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff; /* Blue for emphasis */
+}
+
+/* Table Styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da; /* Subtle border */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 2, 2);
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+    -fx-text-fill: #343a40;
+}
+
+/* Hover effect for rows */
+.table-row-cell:hover {
+    -fx-background-color: #f1f3f5; /* Subtle hover background */
+}
+
+/* Focused Elements */
+.text-field:focused, .table-view:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2px;
+}
+
+/* Shadows for containers */
+.container {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 1, 1);
+    -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+/* Table Headers */
+.table-column > .column-header {
+    -fx-background-color: #e9ecef;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+    -fx-border-color: #dee2e6;
+}
+
+/* Section headers */
+.titled-pane > .title {
+    -fx-background-color: #007bff; /* Blue background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 5px;
+}
+
+/* Form elements */
+.text-field, .date-picker {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 200px;
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.check-box {
+    -fx-font-size: 14px;
+}
+
+/* Buttons */
+.button-primary {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.button-secondary {
+    -fx-background-color: #D32F2F;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+
+.button-primary:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Separator */
+.separator {
+    -fx-background-color: #dee2e6;
+    -fx-padding: 10px 0;
+}
+
+/* GridPane form styling */
+.grid-pane {
+    -fx-hgap: 10px;
+    -fx-vgap: 30px;
+    -fx-alignment: center;
+}
+
+.grid-pane > .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057; /* Darker neutral color for labels */
+}
+
+.grid-pane > .text-field {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 185px;
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.grid-pane > .text-area {
+	-fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.grid-pane > .text-field:focused {
+    -fx-border-color: #007bff; /* Highlight border on focus */
+}
+
+/* Radio Button Group */
+.hbox {
+    -fx-spacing: 15px;
+    -fx-alignment: center-left;
+}
+
+/* Spacing and Insets */
+.vbox {
+    -fx-spacing: 20px;
+}
+
+.hbox > .text-field {
+    -fx-pref-height: 30px;
+    -fx-pref-width: 185px;
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.radio-button {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+}
+
+.radio-button:focused {
+    -fx-border-color: #007bff;
+    -fx-border-radius: 5px;
+}
+
+/* Custom Title Field */
+.text-field #customTitleField {
+    -fx-pref-width: 150px;
+    -fx-background-color: #e9ecef; /* Disabled background color */
+    -fx-border-color: #ced4da;
+}
+
+.text-field #customTitleField:disabled {
+    -fx-opacity: 0.7; /* Subtle opacity for disabled state */
+}
+
+/* General adjustments for alignment and spacing */
+.left-anchor-pane {
+	-fx-background-color:  #404040;
+}
+
+.label-bold {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane stylesheets="@../styles.css"
+	xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.ViewRoomsController">
+	<center>
+		<VBox alignment="TOP_CENTER" spacing="20.0"
+			styleClass="container">
+			<children>
+				<Label alignment="TOP_CENTER" 
+					text="List of Available Rooms" 
+					styleClass="label-title" />
+				<HBox alignment="CENTER_LEFT" spacing="15.0">
+					<children>
+						<Label fx:id="numRoomsLabel" 
+							text="Number of available rooms are: " 
+							styleClass="label-highlight" />
+					</children>
+				</HBox>
+				<TableView fx:id="availableRoomsTable" prefHeight="507.0"
+					prefWidth="580.0" styleClass="table-view">
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+					<columns>
+						<TableColumn fx:id="roomIdCol" prefWidth="190.0"
+							text="Room ID" styleClass="table-column"/>
+						<TableColumn fx:id="roomTypeCol" prefWidth="190.0" 
+							text="Room Type" styleClass="table-column"/>
+						<TableColumn fx:id="roomStatusCol" prefWidth="190.0" 
+							text="Status" styleClass="table-column"/>
+						<TableColumn fx:id="roomRateCol" prefWidth="190.0" 	
+							text="Rate" styleClass="table-column"/>
+					</columns>
+				</TableView>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/22"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.ViewBookingsController">
+	<center>
+		<VBox alignment="TOP_CENTER" spacing="20.0"
+			styleClass="container">
+			<children>
+				<Label alignment="TOP_CENTER" text="List of Bookings"
+					styleClass="label-title" />
+				<HBox alignment="CENTER_LEFT" spacing="15.0">
+					<children>
+						<Label fx:id="numBookingsLabel"
+							text="Number of current bookings are: "
+							styleClass="label-highlight" />
+					</children>
+				</HBox>
+				<TableView fx:id="currentBookingsTable" prefHeight="383.0"
+					prefWidth="677.0" styleClass="table-view">
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+					<columns>
+						<TableColumn fx:id="bookingIdCol" prefWidth="150.0"
+							text="Booking ID" styleClass="table-column" />
+						<TableColumn fx:id="guestNameCol" prefWidth="150.0"
+							text="Customer Name" styleClass="table-column" />
+						<TableColumn fx:id="roomTypeCol" prefWidth="150.0"
+							text="Room Type" styleClass="table-column" />
+						<TableColumn fx:id="numRoomsCol" prefWidth="125.0"
+							text="No. of Rooms" styleClass="table-column" />
+						<TableColumn fx:id="numDaysCol" prefWidth="125.0"
+							text="No. of Days" styleClass="table-column" />
+					</columns>
+				</TableView>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>

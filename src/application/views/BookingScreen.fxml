@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="646.0" prefWidth="984.0" styleClass="root" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.BookingController">
+	<children>
+		<VBox alignment="top_center" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+			<children>
+
+      				<!-- Title Label -->
+				<Label alignment="center" styleClass="label-title" text="Hotel Reservation Booking" />
+
+      				<!-- Guest Information Section -->
+				<VBox alignment="center" spacing="20.0">
+					<HBox alignment="center" spacing="10">
+						<children>
+							<Label text="Number of guests" />
+							<TextField fx:id="numGuests" promptText="Enter number of guests" styleClass="text-field" />
+							<DatePicker fx:id="checkInDate" promptText="Select Check-in Date" styleClass="date-picker" />
+							<DatePicker fx:id="checkOutDate" promptText="Select Check-out Date" styleClass="date-picker" />
+							<Button onAction="#checkAvailableRooms" styleClass="button-primary" text="Check Rooms" />
+						</children>
+					</HBox>
+				</VBox>
+
+      				<Separator />
+
+      				<!-- Room Selection Section -->
+				<TitledPane expanded="true" prefHeight="145.0" prefWidth="706.0" text="Room Options">
+					<content>
+						<VBox alignment="center" spacing="10">
+							<children>
+								<!-- Room Availability Display -->
+								<Label text="Suggested rooms based on number of guests:" />
+								<Label fx:id="availableRoomsLabel" styleClass="label-bold" wrapText="true" />
+
+      								<!-- Room Types -->
+								<HBox alignment="center" spacing="10">
+									<children>
+										<CheckBox fx:id="singleRoomCheck" text="Single Room" />
+										<Label text="Quantity:" />
+										<Spinner fx:id="singleRoomQuantity" disable="true" />
+									</children>
+								</HBox>
+
+      								<HBox alignment="center" spacing="10">
+									<children>
+										<CheckBox fx:id="doubleRoomCheck" text="Double Room" />
+										<Label text="Quantity:" />
+										<Spinner fx:id="doubleRoomQuantity" disable="true" />
+									</children>
+								</HBox>
+
+      								<HBox alignment="center" spacing="10">
+									<children>
+										<CheckBox fx:id="deluxeRoomCheck" text="Deluxe Room" />
+										<Label text="Quantity:" />
+										<Spinner fx:id="deluxeRoomQuantity" disable="true" />
+									</children>
+								</HBox>
+
+      								<HBox alignment="center" spacing="10">
+									<children>
+										<CheckBox fx:id="penthouseRoomCheck" text="Penthouse" />
+										<Label text="Quantity:" />
+										<Spinner fx:id="penthouseRoomQuantity" disable="true" />
+									</children>
+								</HBox>
+							</children>
+						</VBox>
+					</content>
+				</TitledPane>
+
+      				<!-- Booking Summary Section -->
+				<TitledPane expanded="true" text="Booking Summary">
+					<content>
+						<VBox alignment="center" spacing="10">
+							<children>
+								<HBox alignment="center" spacing="10">
+									<children>
+										<Label text="Number of days:" />
+										<Label fx:id="daysLabel" text="0" />
+									</children>
+								</HBox>
+
+      								<HBox alignment="center" spacing="10">
+									<children>
+										<Label fx:id="ratePerDay" text="Rate per day:" />
+									</children>
+								</HBox>
+
+      								<Button onAction="#calculateRatePerDay" text="Calculate Rate" />
+							</children>
+						</VBox>
+					</content>
+				</TitledPane>
+
+      				<!-- Submit Button -->
+				<Button onAction="#submitBooking" styleClass="button-primary" text="Submit Booking" />
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>

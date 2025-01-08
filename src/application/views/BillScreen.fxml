@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="680.0" prefWidth="925.0"
+	stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/22"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.controllers.BillController">
+	<center>
+		<VBox alignment="TOP_CENTER" prefHeight="638.0" prefWidth="885.0"
+			spacing="30.0" fillWidth="true">
+			<children>
+				<Label styleClass="label-title"
+					text="Hotel Reservation - Bill Service Menu" />
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<TextField fx:id="phoneSearchField" prefHeight="25.0"
+							prefWidth="261.0" promptText="Enter booking phone number"
+							styleClass="text-field" />
+						<Button fx:id="searchButton" mnemonicParsing="false"
+							onAction="#onSearch" styleClass="button-primary" text="Search" />
+					</children>
+				</HBox>
+				<GridPane prefHeight="300.0" prefWidth="452.0"
+					styleClass="grid-pane" maxWidth="700.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="ALWAYS"
+							maxWidth="300.0" minWidth="100.0" />
+						<ColumnConstraints hgrow="ALWAYS"
+							maxWidth="400.0" minWidth="200.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints vgrow="ALWAYS" minHeight="30.0" />
+						<RowConstraints vgrow="ALWAYS" minHeight="30.0" />
+						<RowConstraints vgrow="ALWAYS" minHeight="30.0" />
+						<RowConstraints vgrow="ALWAYS" minHeight="30.0" />
+						<RowConstraints vgrow="ALWAYS" minHeight="30.0" />
+						<RowConstraints vgrow="ALWAYS" minHeight="30.0" />
+					</rowConstraints>
+					<children>
+						<Label text="Booking ID" />
+						<Label text="Guest Name" GridPane.rowIndex="1" />
+						<Label layoutX="10.0" layoutY="45.0"
+							text="Number of rooms booked" GridPane.rowIndex="2" />
+						<Label layoutX="10.0" layoutY="74.0" text="Type of room(s)"
+							GridPane.rowIndex="3" />
+						<Label layoutX="10.0" layoutY="103.0"
+							text="Rate per Night($)" GridPane.rowIndex="4" />
+						<TextField fx:id="bookingIdField" disable="true"
+							GridPane.columnIndex="1" />
+						<TextField fx:id="guestNameField" layoutX="178.0"
+							layoutY="11.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						<TextField fx:id="numRoomsField" layoutX="178.0"
+							layoutY="48.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+						<TextField fx:id="ratesPerNightField" layoutX="178.0"
+							layoutY="85.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+						<TextArea fx:id="roomTypeField" prefHeight="200.0"
+							prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+						<Label text="Discounts" GridPane.rowIndex="5" />
+						<HBox alignment="CENTER_LEFT" prefWidth="307.0"
+							spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+							<children>
+								<RadioButton fx:id="rate1" mnemonicParsing="false"
+									styleClass="radio-button" text="5%" />
+								<RadioButton fx:id="rate2" layoutX="51.0"
+									layoutY="10.0" mnemonicParsing="false"
+									styleClass="radio-button" text="10%" />
+								<RadioButton fx:id="rate3" layoutX="96.0"
+									layoutY="10.0" mnemonicParsing="false"
+									styleClass="radio-button" text="15%" />
+								<RadioButton fx:id="rate4" layoutX="123.0"
+									layoutY="10.0" mnemonicParsing="false"
+									styleClass="radio-button" text="20%" />
+								<RadioButton fx:id="rate5" layoutX="142.0"
+									layoutY="10.0" mnemonicParsing="false" prefHeight="19.0"
+									prefWidth="57.0" styleClass="radio-button" text="25%" />
+							</children>
+						</HBox>
+					</children>
+				</GridPane>
+				<HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="395.0"
+					spacing="10.0">
+					<children>
+						<Label fx:id="totalCostLabel" styleClass="label-highlight"
+							text="Total Amount:" />
+					</children>
+				</HBox>
+				<HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="395.0"
+					spacing="10.0">
+					<children>
+						<Button mnemonicParsing="false" onAction="#onCalculate"
+							styleClass="button-primary" text="Calculate Total" />
+						<Button layoutX="420.0" layoutY="10.0"
+							mnemonicParsing="false" onAction="#onSave"
+							styleClass="button-primary" text="Checkout" />
+						<Button layoutX="451.0" layoutY="10.0"
+							mnemonicParsing="false" onAction="#onCancel"
+							styleClass="button-secondary" text="Cancel" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>
